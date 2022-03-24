@@ -15,15 +15,23 @@ input[type=text]:focus {
   list-style: none;
 }
 
-.delete {
+i[data-trash] {
+  transition:all 0.5s ease;
   cursor: pointer;
+}
+.fa-trash-alt:hover{ 
+  background-color: rgba(255, 255, 255, 0.157);
+  border-radius: 50%;
+  padding: 4px;
+  text-align: center;
+  transition:all 0.3s ease-in-out;
 }
 
 .hidden{
   display: none;
 }
 
-.Warning{
+.warning{
   text-align: center;
   color: whitesmoke;
 }
