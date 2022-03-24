@@ -3,15 +3,11 @@ const todosContainer = document.querySelector(".todos-container");
 const formSearch = document.querySelector(".form-search");
 const emptyTodo = document.querySelector(".warning");
 
-
-
 const WarningMessage = () => {
   Array.from(todosContainer.children).length
     ? emptyTodo.classList.add("hidden")
     : emptyTodo.classList.remove("hidden");
 };
-
-
 
 const addTodo = (inputValue) => {
   if (inputValue.length) {
@@ -32,7 +28,6 @@ formAddTodo.addEventListener("submit", (event) => {
   addTodo(inputValue);
 });
 
-
 const removeTodo = (clickedElement) => {
   const trashDataValue = clickedElement.dataset.trash;
   const todo = document.querySelector(
@@ -48,9 +43,6 @@ todosContainer.addEventListener("click", (event) => {
   const clickedElement = event.target;
   removeTodo(clickedElement);
 });
-
-
-
 
 const filterTodos = (todos, inputSearchValue, returnMatchedTodos) => {
   return todos.filter((todo) => {
@@ -69,8 +61,6 @@ const manipulateClasses = (todos, classToAdd, classToRemove) => {
   });
 };
 
-
-
 const hideTodos = (todos, inputSearchValue) => {
   const todoTohide = filterTodos(todos, inputSearchValue, false);
   manipulateClasses(todoTohide, "hidden", "d-flex");
@@ -79,8 +69,6 @@ const showTodo = (todos, inputSearchValue) => {
   const todoToShow = filterTodos(todos, inputSearchValue, true);
   manipulateClasses(todoToShow, "d-flex", "hidden");
 };
-
-
 
 formSearch.addEventListener("input", (event) => {
   const inputSearchValue = event.target.value.trim();
