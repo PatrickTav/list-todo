@@ -1,7 +1,10 @@
 .container {
   max-width: 400px;
 }
+body{
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(11,26,55,1) 49%, rgba(0,212,255,1) 100%);
 
+}
 input[type=text],
 input[type=text]:focus {
   color: #fff;
@@ -11,7 +14,7 @@ input[type=text]:focus {
 }
 
 .todos-container li {
-  background: #484E53;
+  background: #212575;
   list-style: none;
 }
 
